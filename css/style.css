@@ -1,0 +1,656 @@
+/*
+Theme Name: Polaris Digitech
+Theme URI: #
+Author: Polaris Digitech + Team
+Author URI: #
+Description:The Polaris Digitech Theme for WordPress is a fully responsive theme that looks great on any device. Features include a front page template with its own widgets, an optional display font, styling for post formats on both index and single views, and an optional no-sidebar page template.
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Version: 1.0.4
+Template: required-foundation
+Text Domain: requiredstarter
+*/
+
+/*
+	Make the template work
+*/
+@import url(../required-foundation/style.css);
+a {
+    color: #6E8FBA;
+}
+body, div, dl, dt, dd, ul, ol, li, h1, pre, form, p, blockquote, th, td {
+    font-size: 13px;
+}
+body {
+    background: #f3f3f3 url(images/fabric_plaid.png) repeat fixed;
+    font-family:'Open Sans', sans-serif,Arial,sans-serif !important;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 13px !important;
+    line-height: 1;
+    color: #222;
+}
+#main{padding-bottom: 15px;}
+h1, h2, h3, h4, h5, h6, p{ font-family: 'Open Sans', sans-serif; font-weight:normal; }
+
+.entry-header h1, h1.newsTitle{
+    color: #d9c478;
+    font-size: 35px;
+    margin-bottom: 28px;
+    text-rendering: optimizeLegibility;
+}
+.post-only h1, .archive h1{
+    font-size: 19px;
+    margin-bottom:12px;
+    line-height: 1.3;
+}
+h1.newsTitle{
+    margin-top:0px;
+    font-size: 35px;
+}
+
+h6{color: #d9c478;font-weight: bold;}
+article footer.entry-meta {
+padding-bottom:0px;
+border-bottom: 1px dotted #E6E6E6;
+}
+ h1#site-title{
+    margin-top: 8px;
+    margin-bottom: 0px;
+}
+#site-title { font-weight: 400; }
+.anchor-middle{margin: auto;}
+.required-header .inline-list {
+	margin-top: 14px;
+}
+.wwa p:nth-child(3){
+    margin: 0;
+}
+.topblock{
+    background: #fff url(images/mappybg.gif) repeat-x;
+    height:28px;
+    position: relative;
+    display: block;
+    margin: 0px;
+}
+.tBlck{
+    padding:0;
+}
+.loqate, .social,.qContact{
+    display: block;
+    margin: 3px 0 0 0;
+    padding: 0;
+    position:relative;
+}
+.lBox{
+    position: relative;
+    background: transparent url(images/top_icons.png) no-repeat -3% 0%;
+    display: inline-block;
+    height: 24px;
+    width: 20px;
+    float: left;
+}
+.ltext{
+    font-size: 11px;
+    margin:5px 0 0 0;
+    display: inline-block;
+    float: left;
+}
+.ltext a,.ltext a:active,.ltext a:hover,.ltext a:visited{
+    color: #3d366b;
+    text-decoration: none;
+}
+.sBox{
+    float: right;
+    display: inline-block;
+    margin: 0 0px 0 5px;
+    line-height:0;
+    height: 20px;
+    width: 20px;
+    position:relative;
+}
+.social{
+    padding: 2px 0 0 0;
+    top: 31px;
+}
+.twitter{
+    background: transparent url(images/top_icons.png) no-repeat 68% 53%;
+}
+.facebook{
+    background: transparent url(images/top_icons.png) no-repeat 19% 53%;
+}
+.linked{
+    background: transparent url(images/top_icons.png) no-repeat 44% 53%;
+}
+.link-spanner{
+  position:absolute; 
+  width:100%;
+  height:100%;
+  top:0;
+  left: 0;
+  z-index: 1;
+  /* edit: fixes overlap error in IE7/8, 
+     make sure you have an empty gif 
+  background-image: url('empty.gif');*/
+}   
+.headrow{
+    background: transparent url(images/headerBG.png) repeat-x;
+    margin: 0;
+    padding:0;
+}
+.nav-bar {
+    margin-top:3px;
+    background: transparent;
+    height: 32px;
+}
+ul.nav-bar{
+    margin-bottom:2px;
+}
+.nav-bar>li,.nav-bar>li:last-child {
+    border:0px solid #333;
+}
+.nav-bar>li {
+    line-height: 2.5;
+    font-size: 12px;
+    position: relative;
+    top: -3px;
+    border: 0px solid #333;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    background: url(images/li_dmac.png) no-repeat 100% 100%;
+}
+.nav-bar>li:hover {
+    background:transparent url(images/li_dmac.png) no-repeat 100% 100%;
+}
+.nav-bar>li>a {
+    color: #fff;
+    text-transform: uppercase
+}
+.nav-bar>li>a:first-child {
+    font-size: 13px;
+    padding: 0 15px;
+}
+.nav-bar>li.active,.nav-bar>li.active:hover {
+    background: #d9c478;
+    border-color: #d9c478;
+    margin-left: -1px;
+}
+.nav-bar>li:last-child {
+    border: 0px solid #333;
+}
+.nav-bar>li:last-child {
+    -webkit-box-shadow:none;
+    -moz-box-shadow:none;
+    box-shadow:none;
+}
+.nav-bar>li.has-flyout>a:first-child:after {
+    border-color: #fff transparent transparent transparent;
+    right: 16px;
+    top: 15px;
+}
+.flyout {
+    background: #fff;
+    border: 1px solid #d9d9d9;
+    top: 36px;
+    left: -2px;
+    -webkit-box-shadow: 0 1px 5px rgba(0,0,0,0);
+    -moz-box-shadow: 0 1px 5px rgba(0,0,0,0);
+    box-shadow: 0 1px 5px rgba(0,0,0,0);
+}
+ul.flyout li a, .nav-bar li ul li a {
+    background: #fff;
+    border: 0px solid #e6e6e6;
+    border-width: 1px 1px 0 0;
+    color: #555;
+    font-size: 13px;
+    -webkit-box-shadow: 0 1px 0 rgba(255,255,255,0) inset;
+    -moz-box-shadow: 0 1px 0 rgba(255,255,255,0) inset;
+    box-shadow: 0 1px 0 rgba(255,255,255,0) inset;
+}
+ul.flyout li, .nav-bar li ul li {
+    border-left: solid 4px #d9c478;
+}
+.nav-bar>li.has-flyout>a.flyout-toggle {
+    width: 100%;
+}
+ul.flyout li.active a, .nav-bar li ul li.active a {
+background: rgb(61,54,107);
+}
+.tabs.vertical {
+    height: auto;
+    border-bottom: 1px solid #e6e6e6;
+}
+.tabs.vertical dd a, .tabs.vertical li a {
+    font-size: 13px;
+    padding: 10px 15px;
+}
+.tabs.vertical dd, .tabs.vertical li {
+    border-left: 3px solid #d9c478; 
+}
+.tabs.vertical dd.active a, .tabs.vertical li.active a {
+    background: rgb(61,54,107);
+}
+.tabs dd.active, .tabs li.active {
+    border-top: 3px solid rgb(61,54,107);
+    margin-top: -3px;
+}
+.tabs dd a, .tabs li a {
+    padding: 0px 10px;font-size: 12px;
+}
+
+.qContact{
+    /*top: 31px;*/
+}
+.contactBox h6{
+    margin-bottom:0px;
+}
+.qBox{
+    position: relative;
+    background: transparent url(images/top_icons.png) no-repeat 98% 0%;
+    display: inline-block;
+    height: 24px;
+    width: 24px;
+    float: right;
+}
+.qtext{
+    font-size: 11px;
+    margin:5px 0 0 5px;
+    display: inline-block;
+    float: right;
+}
+.responsive-slider.flexslider {
+    margin-bottom: 10px;
+}
+.newsHeader{
+    width:100%;padding: 0 10px;
+}
+.newsHeaderBox{
+    background: #3d366b;
+}
+.ticker{
+    width:99%;padding: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.tickerBox{
+    background: #fff;
+    height: 42px;
+}
+div.ticker a {
+    color: #c60000;
+    font-weight: bold;
+}
+div.ticker a:hover {
+    color: #e00000;
+}
+.newsHeader h3{color: #fff;font-weight: bold;text-align: center;font-size: 13px;}
+/*Clear fix style*/
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0; 
+}
+header img{
+    margin: 0 0 10px 0;
+}
+.wSect, .wSect-nopadding, .wSect-topPadding{
+    background: #fff;
+    padding: 15px;
+    margin: 0;
+    width: 100%;
+    /*overflow: hidden;*/
+    display: inline-block
+}
+.wSect-nopadding,.wSect-topPadding{
+    padding:0;
+}
+.wSect-topPadding #main{
+    padding-top:15px;
+}
+.wwa h4{
+    color: #3d366b;
+    font-weight: 600;
+}
+.wwa p{text-align: center}
+.sectTitle{
+    width: 100%;
+    background: url(images/title_line.png) repeat-x 0 55%;
+    padding: 0;
+}
+.sectTitle h4{
+    background-color: #fff;
+    padding: 0px 10px;
+    margin-top: 0;
+    text-align: center;
+    width: 157px;
+    margin: auto;
+}
+
+#carouselBox .sectTitle{
+    margin-bottom: 10px;
+}
+.pull-right{
+    float: left;
+    position: absolute;
+    top: 220px;
+    right: 0;
+}
+.readMore{
+    font-size: 12px;
+    background-color: #d9c478;
+    padding: 6px;
+    min-width: 9px;
+    /*max-width: 100px;*/
+}
+ a.readMore{
+    color: #3d366b;
+    text-align: center;
+    display: block;
+}
+.single_job_listing .application .application_button{
+    background-color: #d9c478;
+    border: 0px;
+    color: #3d366b;
+}
+.single_job_listing .application .application_details {
+    box-shadow: none
+}
+.logoBox h4{
+    font-size: 19px;
+}
+h2.team-title{
+    font-size:20px;
+    margin: 0 0 8px 0 !important;
+    color: #6e8fba;
+}
+h4.team-position{
+    font-size: 19px;
+}
+.footerContainer{
+    background-color: #2f3035;
+    padding: 0;
+    margin: 20px 0 0 0;
+    font-size: 12px;
+    color: #ffffff;
+}
+.footerContainer p{
+    font-size: 12px;
+}
+.footerContainer a{
+    font-size: 12px;
+    margin: 0 0;
+    padding: 0;
+    color: #d9c478;
+}
+#supplementary .widget-title{
+    color: #ffffff;
+    font-size: 14px;
+}
+#footer{
+    text-align: center;
+}
+
+.borderline{
+    height: 1px;
+    border-top: 1px solid #3b3b3b;
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar-box{
+    /*background-color: rgba(243, 243, 243, 0.62);
+    border-left: solid 8px #d9c478;*/
+    padding:15px 0 10px 0;
+}
+.sidebar-box .widget-title,.sidebar-box .widgettitle{
+    color: #ffffff;
+    background: #6e8fba;
+    font-size: 19px;
+    padding: 10px 10px;
+    margin: 0;
+}
+#secondary,.menuBox, .latest_newsBox,.trainingList{
+    background-color: rgba(243, 243, 243, 0.62);
+}
+#secondary ul,.menuBox ul, .latest_newsBox ul,.trainingList ul{
+    list-style: none;
+    padding:0px;
+    margin: 0px;
+}
+#secondary ul li,.menuBox ul li, .latest_newsBox ul li,.trainingList ul li,{
+    display: block;
+    padding: 1px;    
+    border-bottom: 1px solid #ffffff;
+}
+#secondary ul li a,.menuBox ul li a,.latest_newsBox ul li a,.trainingList ul li a{
+    display: block;
+    padding:7px 20px;
+    margin:0;
+    color: #3d366b;
+}
+#secondary ul li.active,
+.menuBox ul li.active,
+.latest_newsBox ul li.active,
+.trainingList ul li.active{
+    /*border-left: solid 8px #d9c478;*/
+    background-color:#d9c478;
+    color: #ffffff;
+}
+#secondary ul li a:hover,
+.menuBox ul li a:hover,
+.latest_newsBox ul li a:hover,
+.trainingList ul li a:hover{
+    padding:7px 20px 7px 12px;
+    background-color: rgba(255, 255, 255, 1);
+    border-left: solid 8px #d9c478;
+}
+#secondary ul li a:active,.menuBox ul li a:active,.latest_newsBox ul li a:active,.trainingList ul li a:active,{
+    color: #ffffff !important;
+}
+.box p{
+    display: block;
+}
+.box,.serviceContent,.partnerContent{
+    display: block;
+    margin: 0;
+    padding:5px 10px;
+    overflow: hidden;
+}
+.serviceContent h5,h5{
+    font-weight: bold;
+    color: #443c7c;
+    margin:5px 0 5px 0
+}
+.serviceContent p{
+    font-size: 12px;
+}
+.utilityBox{display:block}
+.utilityBox h4{
+    font-weight: bold;
+    color: #d9c478;
+    margin:5px 0 17px 0
+}
+
+.partnerContent{ padding:12px 10px;}
+.partnerBox{display:block}
+.projectBox .row{ padding-top:7px;padding-bottom:7px;}
+.projectBoxContent h6{
+    margin: 5px 0 5px 0;
+    font-size:13px;
+}
+.projectBoxContent h5{
+    font-size:13px;
+}
+
+.dottedborderline{
+    height: 1px;
+    border-top: 1px dotted #6e8fba;
+    display: block;
+    opacity: 0.5;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+article footer.entry-meta {
+    padding-bottom: 0px;
+    border-bottom: 1px dotted #6e8fba;
+}
+.leftBox{
+   display: inline-block;
+   float: left;
+   margin: 0;
+   padding: 0;
+   width: 30%; 
+}
+.rightBox{
+   display: inline-block;
+   float: right;
+   margin: 0;
+   padding: 0;
+   width:65%; 
+}
+form.job_filters{
+    display: none;
+    visibility: hidden;
+}
+#third p{
+    font-style: normal;
+}
+.entry-content .products ul{
+    margin-left:0px;
+}
+/*
+.partnerBox h5{
+    font-weight: bold;
+    color: #6e8fba;
+}*/
+
+.button {
+    width: auto;
+    background:#d9c478;
+    border:0px solid #1e728c;
+    -webkit-box-shadow: none;
+    -moz-box-shadow:none;
+    box-shadow:none;
+    color: #3d366b;
+    font-size: 14px;
+    font-weight: normal;
+    -webkit-transition: background-color 0.15s ease-in-out;
+    -moz-transition: background-color 0.15s ease-in-out;
+    -o-transition: background-color 0.15s ease-in-out;
+    transition: background-color 0.15s ease-in-out;
+}
+.servicebtn {
+    position: absolute;
+    bottom: -8px;
+    right: 29px;
+}
+.button:hover, .button:focus {
+    color: #3d366b;
+    background-color: #c8aa3c;
+}
+.button.small {
+    font-size: 12px;
+    padding: 7px 14px 8px;
+}
+li#software2Tab ol li{
+    margin-bottom: 5px;
+}
+
+.customerBox{display:none}
+.simplemap{
+    border: 11px #f3f3f3 solid;
+}
+
+.training input[type="text"], .training input[type="password"], .training input[type="date"],.training input[type="datetime"], .training input[type="email"], .training input[type="number"], .training input[type="search"], .training input[type="tel"], .training input[type="time"],.training input[type="url"]{
+margin: 0px 0 -11px 0;
+padding: 7px;
+height: 28px;
+width: 100%;
+}
+.training textarea {
+height: 88px !important;
+margin-bottom: 0px;
+}
+.training .error small, .training small.error {
+position:relative;
+top:12px;
+}
+.training select {
+width: 100%;
+height:28px;
+padding:3px;
+margin: 0px 0 -11px 0;
+}
+.clearfix {
+    display: inline-block;
+}
+ 
+html[xmlns] .clearfix {
+    display: block;
+}
+* html .clearfix {
+    height: 1%;
+}
+.image-box {
+padding: 5px;
+border: 1px solid #d9c478;
+}
+
+.textheader,.idheader{
+    color: #3d366b;
+    font-size: 20px;
+    margin-bottom: 3px;
+    margin-top: 1px
+}
+.idheader{
+    color:#6E8FBA;
+}
+table.imageDetails{
+    width: 100%;
+}
+table.imageDetails tr td{
+    font-size: 12px;
+    padding: 3px 5px;
+}
+
+table.imageDetails thead tr th{
+    padding: 2px 10px 2px;
+}
+table.imageDetails tr td{ }
+table.imageDetails tr td:first-child { text-align: left; font-weight:bold;}
+.reveal-modal {
+  top: 0px; !important;
+  left: 50%;
+  margin-left: -390px;
+  width: 788px;
+}
+
+#myModal hr{
+    margin: 3px 0 3px 0;
+}
+
+#myModal div.wpcf7-validation-errors, #myModal div.wpcf7-validation-errors, #myModal div.wpcf7-spam-blocked, #myModal div.wpcf7-mail-sent-ng, #myModal div.wpcf7-mail-sent-ok {
+  display: inline-block;
+  padding: 6px 7px 7px;
+  font-weight: bold;
+  font-size: 14px;
+  color: white;
+  background-color: #2ba6cb;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  margin-bottom: 12px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  text-shadow: 0 -1px rgba(0, 0, 0, 0.3);
+  /* position: relative; */
+}
